@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  /* golbal varible */
+  :root{
+    --cyan:hsl(158, 36%, 37%);
+    --cyan2:#214538;
+    --cream:hsl(30, 38%, 92%);
+    --dark-blue:hsl(212, 21%, 14%);
+    --dark-grayish-blue:hsl(228, 12%, 48%);
+    --white:hsl(0, 0%, 100%);
+    --main-font:'Montserrat', sans-serif;
+    --secondry-font:'Fraunces', serif;
+    --fw-bold:700;
+    --fw-regular:500;
+
+  }
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: var(--dark-grayish-blue);
+  }
+   /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+}
+  /*
+    8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+p{
+    font-size:.875rem ;
+}
+body{
+    display: grid;
+    place-content: center;
+    background-color: var(--cream);
+    margin: 1rem;
+}
+main article{
+    max-width: 600px;
+    background-color: var(--white);
+    border-radius: .5rem;
+    overflow: hidden;
+    display: grid;
+
+
+}
+@media ( min-width:600px) {
+    main article{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+article .proudct_content{
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+
+}
+article .proudct_content .proudct__category{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: .815rem;
+}
+article .proudct_content .proudct__title{
+    font-family: var(--secondry-font);
+    line-height: 1.1;
+    font-size: 2rem;
+    color:black;
+}
+article .proudct_content .content{
+
+}
+article .proudct_content .price{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+article .proudct_content .price .new__price{
+    font-size: 2rem;
+    font-family: var(--secondry-font);
+    color: var(--cyan);
+
+}
+article .proudct_content .price .old__price{
+    text-decoration: line-through;
+}
+
+article .proudct_content button{
+    cursor: pointer;
+    padding: .75rem 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    border: none;
+    background-color: var(--cyan);
+    color: var(--white);
+    border-radius: 8px;
+    font-weight: var(--fw-bold);
+    position: relative;
+}
+article .proudct_content button:is(:hover,:focus){
+    background-color: var(--cyan2);
+}
+article .proudct_content button::before{
+    content: "";
+    background-image: url('images/icon-cart.svg');
+    width: 15px;
+    height: 16px;
+
+}
