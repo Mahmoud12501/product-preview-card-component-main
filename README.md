@@ -2,8 +2,7 @@
 
 This is a README file for the "Product Preview Card Component" challenge from Frontend Mentor. In this challenge, HTML and CSS were used to create a responsive and accessible product preview card component. The following guidelines were followed while completing the challenge:
 
-![Alt Text](design/desktop-preview.jpg)
-![Alt Text](design/mobile-design.jpg)
+![Alt Text](design/desktop-preview.jpg) ![Alt Text](design/mobile-design.jpg)
 
 ### Semantic Elements
 Semantic HTML elements were used to structure the content and provide meaningful information to assistive technologies and search engines. This improves the accessibility and maintainability of the code.
